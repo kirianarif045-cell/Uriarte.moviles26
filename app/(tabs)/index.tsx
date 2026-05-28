@@ -1,4 +1,4 @@
-import { Image, Text, View } from "react-native";
+import { Button, Image, Text, TextInput, View } from "react-native";
 
 export default function App() {
   return (
@@ -10,15 +10,55 @@ export default function App() {
         backgroundColor: "grey",
       }}
     >
-      <Text style={{ color: "white", fontSize: 50, fontStyle: "italic" }}>
-        ¡Hola mundo React Nativexd!
+      <Text
+        style={{
+          color: "white",
+          fontSize: 50,
+          fontStyle: "italic",
+        }}
+      >
+        ¡Bienvenido a nuestra pagina!
       </Text>
-      <Text style={{ fontSize: 18 }}>esto es un super texto creado por mi</Text>
-      <Image
-        source={{
-          uri: "https://i.pinimg.com/1200x/5e/84/9a/5e849adab971e3d40d0dcea8c738d295.jpg"}}
-          style={{ width: 50, height: 50 }}
+
+      <Text style={{ fontSize: 18 }}>
+        Descripcion provisional improvisada
+      </Text>
+      
+      <View
+        style={{
+          flex: 1,
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      
+      >
+        <Image
+          source={{
+            uri: "https://media1.tenor.com/m/wBzXX1bly3sAAAAd/subaru-natsuki-subaru.gif",
+          }}
+          style={{ width: 300, height: 300,margin:10 }}
+        />
+        <Image
+          source={{
+            uri: "https://media1.tenor.com/m/85WyIWYK_tQAAAAd/re-zero-natsuki-subaru.gif  ",
+          }}
+          style={{ width: 300, height: 300,margin:10 }}
+        />
+      </View>
+
+      <TextInput
+      placeholder="Escribe aqui"
+      style={{borderWidth: 1, padding: 8,backgroundColor:"white",marginBottom: 10}} 
       />
+
+      <Button
+        title= "presionar"
+        onPress={()=>alert("Boton presionado")}
+        color="purple"
+      />
+      
     </View>
   );
+ 
 }
